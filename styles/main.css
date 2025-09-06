@@ -1,0 +1,117 @@
+/* Контейнер для двох кнопок */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Вхід + Реєстрація */
+nav ul .btn {
+  transform: rotate(-20deg);         /* нахил */
+  margin-top: 20px;                  /* зсув вниз */
+  transition: transform .2s, margin .2s;
+}
+
+nav ul .btn:nth-child(2) {           /* друга кнопка (Реєстрація) */
+  margin-top: 40px;                  /* ще нижче, щоб був кут */
+  transform: rotate(-20deg);
+}
+
+/* ефект при наведенні */
+nav ul .btn:hover {
+  transform: rotate(-20deg) scale(1.05);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* меню зліва */
+nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* кнопки справа */
+nav .auth {
+  display: flex;
+  gap: 12px;
+}
+/* ====== BASE ====== */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #000;          /* чорний фон для всього сайту */
+  color: #fff;               /* білі літери */
+}
+
+/* ====== HEADER ====== */
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  background: #000;          /* чорний фон шапки */
+  border-bottom:1px solid #333; /* легка сіра лінія */
+}
+
+.logo {
+  font-size:1.4rem;
+  font-weight:800;
+  color:#fff;                /* білий логотип */
+}
+
+/* ====== NAVIGATION ====== */
+nav ul li a {
+  color:#fff;                /* білі слова */
+  padding:8px 12px;
+  border-radius:8px;
+  transition:.2s;
+}
+nav ul li a:hover {
+  background:#111;           /* підсвітка темно-сірим */
+  color:#fff;
+}
+
+/* ====== SEARCH FORM ====== */
+.search-form {
+  display:flex;
+  align-items:center;
+  border:1px solid #444;
+  border-radius:10px;
+  background:#111;
+  padding:4px 6px;
+}
+.search-form_txt {
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;                /* білий текст у полі */
+  padding:6px 8px;
+}
+.search-form_btn img {
+  filter: invert(1);         /* зробить іконку білою */
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+  background:#111;           /* чорна кнопка */
+  border:1px solid #555;
+  border-radius:10px;
+  padding:6px 12px;
+  font-size:0.95rem;
+  font-weight:600;
+  color:#fff;
+  transition:background .2s, transform .1s;
+}
+.btn:hover {
+  background:#222;           /* трохи світліше при наведенні */
+  transform:translateY(-2px);
+}
+.logo img {
+  display:block;
+  max-height:50px;  /* обмеження висоти */
+}
